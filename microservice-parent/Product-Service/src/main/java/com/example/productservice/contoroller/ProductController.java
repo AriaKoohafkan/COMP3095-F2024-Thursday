@@ -1,3 +1,5 @@
+package com.example.productservice.contoroller;
+
 import com.example.productservice.dto.ProductRequest;
 import com.example.productservice.dto.ProductResponse;
 import com.example.productservice.service.ProductService;

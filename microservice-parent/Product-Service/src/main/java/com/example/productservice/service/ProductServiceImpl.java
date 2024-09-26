@@ -11,7 +11,8 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Service;
 
-import javax.management.Query;
+import org.springframework.data.mongodb.core.query.Query;
+
 import java.math.BigDecimal;
 import java.net.http.HttpClient;
 import java.util.List;
