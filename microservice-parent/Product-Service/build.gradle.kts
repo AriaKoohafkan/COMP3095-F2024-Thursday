@@ -35,8 +35,20 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-testcontainers")
 	testImplementation("org.testcontainers:junit-jupiter")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	testImplementation("io.rest-assured:rest-assured:5.3.0") {
+		exclude(group = "org.codehaus.groovy", module = "groovy")
+		exclude(group = "org.codehaus.groovy", module = "groovy-xml")
+	}
+
+	// Exclude Groovy from transitive dependencies
+	testImplementation("io.rest-assured:json-path:5.4.0") {
+		exclude(group = "org.codehaus.groovy", module = "groovy")
+	}
+	testImplementation("io.rest-assured:xml-path:5.4.0") {
+		exclude(group = "org.codehaus.groovy", module="groovy")
 }
 
 tasks.withType<Test> {
 	useJUnitPlatform()
-}
+} }
+
